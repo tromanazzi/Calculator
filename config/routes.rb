@@ -1,0 +1,36 @@
+Rails.application.routes.draw do
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  root :to => "buttons#Home" 
+
+  match "buttons/Home" => 'buttons#home', via: [:get, :post]
+  match "buttons/Backspace" => 'buttons#backspace', via: [:get, :post]
+  match "buttons/CE" => 'buttons#ce', via: [:get, :post]
+  match "buttons/C" => 'buttons#c', via: [:get, :post]
+  match "buttons/MC" => 'buttons#mc', via: [:get, :post]
+  match "buttons/MR" => 'buttons#mr', via: [:get, :post]
+  match "buttons/MS" => 'buttons#ms', via: [:get, :post]
+  match "buttons/MPlus" => 'buttons#m_plus', via: [:get, :post]
+  match "buttons/MMinus" => 'buttons#m_minus', via: [:get, :post]
+  match "buttons/One" => 'buttons#input', :num => 1, via: [:get, :post]
+  match "buttons/Two" => 'buttons#input', :num => 2, via: [:get, :post]
+  match "buttons/Three" => 'buttons#input', :num => 3, via: [:get, :post]
+  match "buttons/Four" => 'buttons#input', :num => 4, via: [:get, :post]
+  match "buttons/Five" => 'buttons#input', :num => 5, via: [:get, :post]
+  match "buttons/Six" => 'buttons#input', :num => 6, via: [:get, :post]
+  match "buttons/Seven" => 'buttons#input', :num => 7, via: [:get, :post]
+  match "buttons/Eight" => 'buttons#input', :num => 8, via: [:get, :post]
+  match "buttons/Nine" => 'buttons#input', :num => 9, via: [:get, :post]
+  match "buttons/Zero" => 'buttons#input', :num => 0, via: [:get, :post]
+  match "buttons/Multidigits" => 'buttons#multidigits', via: [:get, :post]
+  match "buttons/PlusMinus" => 'buttons#plus_minus', via: [:get, :post]
+  match "buttons/Dot" => 'buttons#dot', via: [:get, :post]
+  match "buttons/Divide" => 'buttons#divide', via: [:get, :post]
+  match "buttons/Multiply" => 'buttons#multiply', via: [:get, :post]
+  match "buttons/Add" => 'buttons#plus', via: [:get, :post]
+  match "buttons/Subtract" => 'buttons#minus', via: [:get, :post]
+  match "buttons/Sqrt" => 'buttons#square_root', via: [:get, :post]
+  match "buttons/Percent" => 'buttons#percent', via: [:get, :post]
+  match "buttons/OneOver" => 'buttons#reciprocal', via: [:get, :post]
+  match "buttons/Equals" => 'buttons#equals', via: [:get, :post]
+end
